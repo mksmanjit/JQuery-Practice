@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<script>
+			window.jQuery || document.write('<script src="jquery.js"><\/script>')
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+					//alert('window loaded');
+				};
+				$(document).ready(function(){
+					 //alert('DOM Loaded');
+					 //$('#myContent').html('Hello World');
+					 /*var coll = $('div');
+					 alert(coll.length);
+					 var coll1 = $('div, span');
+					 alert(coll1.length);
+					 $('div, span').css('background-color','red');
+					 $('div').each(function(){
+						 	alert($(this).html());
+					 });
+					 var tableVar = $('table tr');
+					 alert(tableVar.length);
+					 alert($('#myContent').html());
+					 $('span.blueDiv,div.redDiv').css('border','10px solid blue');
+					 var divTitle1 = $('div[title]');
+					 alert("divTitle1.length>>" + divTitle1.length);
+					 var divTitle2 = $('div[title="My-First Div"]');
+					 alert("divTitle2.length>>" + divTitle2.length);
+
+					 var divTitle3 = $('div[title="My-Second Div"]');
+					 alert("divTitle3.length>>" + divTitle3.length);
+
+					 var inputs = $('input[type="text"]');
+					 inputs.css('background-color','yellow');
+
+					 var allInputs = $(':input');
+					 alert($(allInputs[1]).val());
+
+					 $(':input').each(function() {
+						  var inp = $(this);
+							alert(inp.val());
+							alert(inp.val("foo"));
+					 });
+					 alert($('div:contains("World")').html());
+					 $('#firstTable tr:odd').css('background-color','green');
+					 $('tr:even').css('background-color','yellow');
+					 $('tr:first-child').css('background-color','red');
+					 var divs = $('div[title$="Div"]');
+					 alert($(divs[1]).html());
+					 alert("First" + $('div[title$="Div"]').html());
+					 alert("Second" + $('div[title^="My"]').html());
+					 alert("Third" + $('div[title*="-"]').html());
+					 $('div[title*="-"]').html('Updated Div value due to Title');
+					 var html ='';
+					 $('div.redDiv,div.blueDiv').each(function(index){
+						 html += "<br/>" + index + " " + $(this).text();
+					 });
+					 $('#outputDiv').html(html);*/
+					 $('div.redDiv, div.blueDiv').each(function(index){
+						   this.title = "new Title";
+							 //alert(this.title);
+							 $(this).attr('title', 'new Title 2');
+					 });
+					 $('div.redDiv, div.blueDiv').attr(
+						 {
+							 title: 'new Title 3'
+						 }
+					 )
+					 .css('font-size','24pt')
+					 .css('background-color','red');
+				});
+
+		</script>
+	</head>
+	<body>
+		<div id="outputDiv"></div>
+	<div id="myContent" class="redDiv" title="My-First Div">
+		Hello World hi
+		<span>Hello World hi</span>
+	</div>
+	<div class="blueDiv" title="My-Second Div">
+		Second Span
+		<span>Second Span</span>
+	</div>
+	<span class="blueDiv" title="My-Second Div">
+		Blue Span
+	</span>
+	<table id="firstTable">
+		<tr>
+			<td>First Element </td>
+		</tr>
+		<tr>
+			<td>Second Element </td>
+		</tr>
+		<tr>
+			<td>Third Element </td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td>2nd First Element </td>
+		</tr>
+		<tr>
+			<td>2nd Second Element </td>
+		</tr>
+		<tr>
+			<td>2nd Third Element </td>
+		</tr>
+	</table>
+	First Number:<input type="text"/>
+	Second Number:<input type="text" value="John"/>
+	<textarea rows="5" cols="60">Textarea</textarea>
+	<select>
+		 <option value="CA"></option>
+		 <option value="MA"></option>
+	</select>
+	<input type="button" value="submit"/>
+	</body>
+</html>
